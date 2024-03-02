@@ -44,3 +44,38 @@ a{
 .lin{
     border-radius: 2px;
 }
+@media (max-width: 1536px){
+    .container{
+        width: 1366px;
+    }
+}
+@media (max-width: 1366px){
+    .container{
+        width: 1280px;
+    }
+}
+@media (max-width: 1280px){
+    .container{
+        width: 1024px;
+    }
+}
+@media (max-width: 1024px){
+    .container{
+        width: 768px;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        width: 500px;
+    }
+}
+@media (max-width: 500px){
+    .container{
+        width: 480px;
+    }
+}
+@media (max-width: 480px){
+    .container{
+        width: 320px;
+    }
+}

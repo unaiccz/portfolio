@@ -36,7 +36,7 @@ function Links() {
       }
 
   </div>
-  <button onClick={() => setOpen((prev)=>(!prev))}>Menu</button>
+  <button onClick={() => setOpen((prev)=>(!prev))} className={styles.menu }>Menu</button>
 {
   open && <div className={styles.mobile}>
 {

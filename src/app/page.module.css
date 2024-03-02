@@ -1,0 +1,41 @@
+.container{
+display: flex;
+gap: 100px;
+}
+.text{
+    flex: 1;
+display: flex;
+flex-direction: column;
+}
+.brands{
+    width: 500px;
+    height: 50px;
+    position: relative;
+}
+.imgcontainer{
+    flex: 1;
+    position: relative;
+  
+}
+.title{
+    font-style: 96px;
+}
+.buttons *{
+    padding: 20px;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.buttons *{
+    margin-right: 20px;
+}
+.buttons *:first-child{
+    background-color: var(--btn);
+}
+.buttons *:hover{
+    opacity: 0.8;
+}
+.buttons{
+    margin-top: 40px;
+}

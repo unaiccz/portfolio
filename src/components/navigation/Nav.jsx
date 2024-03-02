@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './nav.module.css'
 import Links from './links/Links'
+import Link from 'next/link'
 function Nav() {
   return (
     <div className={styles.container}>
-        <div className={styles.logo}>Logo</div>
+        <Link className={styles.logo} href='/'>Logo</Link>
         <div>
             <Links />
         </div>
