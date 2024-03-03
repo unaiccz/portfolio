@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 function page() {
   return (
     <div className={styles.container}>
@@ -13,8 +14,8 @@ function page() {
 
       {/* buttons  */}
       <div className={styles.buttons}>
-        <button>Learn More</button>
-        <button>Contact</button>
+        <Link href='/about'>Learn More</Link>
+        <Link href='/contact'>Contact</Link>
       </div>
       {/* brands */}
       <div className={styles.brands}>
