@@ -23,3 +23,18 @@
 .title{
     color: var(--btn);
 }
+@media screen and (max-width:1025px) {
+    .imgcontainer{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{flex-direction: column;
+    }
+    .boxes{
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+}

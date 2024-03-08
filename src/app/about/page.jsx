@@ -28,12 +28,12 @@ I am a React developer with great aspirations and eager to learn from this beaut
     <div className={styles.box}>
     <h3>Flexible</h3>
     <p>Works</p>
-    /</div>
+    </div>
 </div>
       </div>
       {/* image */}
       <div className={styles.imgcontainer}>
-<Image src="/about.jpg" alt="about" width={600} height={300} />
+      <Image src="/about.jpg" alt="about" width={600} height={300} />
       </div>
     </div>
   )

@@ -47,3 +47,24 @@ flex-direction: column;
     margin-top: 20px;
     font-size: 20px;
 }
+@media screen and (max-width: 1024px) {
+    .container{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .title{
+        font-size: 50px;
+    }
+    .brands{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+.buttons{
+display: flex;
+}
+}

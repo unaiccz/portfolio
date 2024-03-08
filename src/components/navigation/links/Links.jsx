@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './links.module.css'
 import React, { useState } from 'react';
 
@@ -36,7 +37,7 @@ function Links() {
       }
 
   </div>
-  <button onClick={() => setOpen((prev)=>(!prev))} className={styles.menu }>Menu</button>
+  <Image onClick={() => setOpen((prev)=>(!prev))} className={styles.menu } src='/menu.png' alt='menu' width={30} height={30}></Image>
 {
   open && <div className={styles.mobile}>
 {
