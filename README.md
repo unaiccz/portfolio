@@ -1,3 +1,11 @@
+# Nextjs portfoli
+## More performance using ssr(server-side components)
+this **version** use a external api to get the blogs
+- in the next version i will create my own ***backend***
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
