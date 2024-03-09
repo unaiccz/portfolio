@@ -1,4 +1,4 @@
-# Nextjs portfoli
+# Nextjs portfolio
 ## More performance using ssr(server-side components)
 this **version** use a external api to get the blogs
 - in the next version i will create my own ***backend***
