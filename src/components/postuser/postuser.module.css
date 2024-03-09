@@ -1,0 +1,14 @@
+.detailtext{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.detailtitle{
+    flex: 1;
+    color: gray;
+    font-weight: bold;
+
+}
+.detailname{
+    font-weight: 500;
+}

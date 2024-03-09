@@ -3,7 +3,7 @@ import styles from './card.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function Card() {
+function Card({post}) {
   return (
     // container
     <div className={styles.container}>
@@ -17,9 +17,9 @@ function Card() {
         </div>
         {/* bottom */}
         <div className={styles.bottom}>
-        <h1 className={styles.title}>title</h1>
-        <p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, placeat. Nemo quibusdam esse nulla illum laborum? In molestiae quisquam, laboriosam nesciunt exercitationem vero, eum optio amet veritatis mollitia quas reprehenderit?</p>
-        <Link href='/blog/1' className={styles.link}>Learn More</Link>
+        <h1 className={styles.title}>{post.title}</h1>
+        <p className={styles.desc}>{post.body}</p>
+        <Link href={`/blog/${post.id}`} className={styles.link}>Learn More</Link>
     </div>
     </div>
   )
