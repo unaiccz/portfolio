@@ -12,15 +12,7 @@ export const getposts = async () => {
         throw new Error(error);
     }
 }
-export const getpost = async (slug) => {
-    try {
-        connectdb();
-        const post = await Post.findOne({slug});
-        return post;
-    } catch (error) {
-        throw new Error(error);
-    }
-}
+
 export const getuser = async (id) => {
     try {
         connectdb();
