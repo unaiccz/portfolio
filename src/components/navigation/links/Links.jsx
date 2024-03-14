@@ -9,8 +9,8 @@ import Navlink from './Navlink'
 function Links() {
   const [open, setOpen] = useState(false);
   
-  const session = true
-  const admin = true
+  const session = false
+  const admin = false
   const links = [
     {name: 'Home', path: '/'},
     {name: 'About', path: '/about'},
