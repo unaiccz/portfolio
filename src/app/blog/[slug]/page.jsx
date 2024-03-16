@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from './page.module.css'
 const ft = async (slug) => {
-     const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {next:{revalidate:3600}})
+     const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {next:{revalidate:10}})
      if (!res.ok) {
        throw new Error('Something went wrong')
      }
@@ -27,7 +27,7 @@ return (
 </div>
 <div className={styles.detailtext}>
 <span className={styles.dertailtitle}>Published</span>
-<span className={styles.detailtext}>{post.createdAt.toString().slice(0,16)}</span>
+<span className={styles.detailtext}>{post.createdAt ? post.createdAt.toString().slice(0,16) : 'no-date'}</span>
 </div>
 </div>
 <div className={styles.content}>

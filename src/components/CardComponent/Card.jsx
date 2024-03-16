@@ -14,7 +14,7 @@ function Card({post}) {
         <div className={styles.imgcontainer}>
 <Image src={post.img} alt='post' fill/>
         </div>
-        <span className={styles.date}>{post.createdAt.toString().slice(0,16)}</span>
+        <span className={styles.date}>{post.createdAt ? post.createdAt.toString().slice(0,16) : 'no-date'}</span>
         </div>
         {/* bottom */}
         <div className={styles.bottom}>

@@ -38,17 +38,12 @@
     display: flex;
     gap: 6px;
 }
-.liq a{
-    color: #fff;
-font-weight: bold;
-}
-.success{
-    color: green;
+.liq a {
     font-weight: bold;
-    opacity: 0.5;
 }
 .error{
-    color: red;
+    background-color: red;
+    margin: 4px;
+    border-radius: 4px;
     font-weight: bold;
-    opacity: 0.5;
 }

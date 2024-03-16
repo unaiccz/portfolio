@@ -1,12 +1,10 @@
 'use client';
-import { useRouter } from 'next/navigation';
-
-import React, { useState, useEffect } from 'react';
-import { handlesesion } from '@/components/navigation/links/Links';
+import React, { useState } from 'react';
 import styles from './login.module.css';
 
+//funcion asincrona para rergistrar usuario en /api/auth
 async function registerUser(credentials) {
-  return fetch('/api/login/', {
+  return fetch('/api/auth/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -15,12 +13,7 @@ async function registerUser(credentials) {
   })
     .then(data => data.json())
 }
-
 function Page() {
-  const router = useRouter();
-
-
-
   const [data, setdata] = useState();
   
   const [form, setForm] = useState({ username: '', email: '', password: '' });
@@ -34,40 +27,37 @@ function Page() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(form);
     registerUser(form)
       .then(data => {
         setdata(data);
-        console.log(data.message);
-        if (data.message === 'User logged') {
-          // Assuming data.user contains the user data
-          localStorage.setItem('loggedInUser', JSON.stringify(form));
-        }
-        router.push('/');
-
-      }
-      )
+      })
+    // Aquí puedes manejar el envío del formulario, por ejemplo, enviándolo a una API
   };
-
 
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className="head">
-          <div>
-            <h2>{data ? (<p className={styles.error}>{data.message}</p>): <p className={styles.success}>Logged</p>}</h2>
-          </div>
-          <h2>Login ✉</h2>
+          <h2>Register ❤</h2>
         </div>
         <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required onChange={handleChange} />
           <label htmlFor='email'>Email</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required onChange={handleChange} />
           <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Enter your password" required onChange={handleChange} />
         </div>
-        <input type="submit" value={'Login'} />
+        <input type="submit" value={'Register'} />
+         {/* tsg to show the error */}
         <div className="error">
+<div className={styles.error}>
+<p>{data && (data.error ? 'This user exists' : 'User registered!!!')}</p>
+
+</div>
         <div className={styles.liq}>
-        <p>you are not registered?</p> <a href="/register">Register</a>
+        <p>Are you a current user?</p> <a href="/login">Login</a>
         </div>
         </div>
       </form>

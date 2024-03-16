@@ -2,21 +2,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './links.module.css'
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 import Navlink from './Navlink'
 
 function Links() {
+
   const [open, setOpen] = useState(false);
-  
-  const session = false
+  const [session, setSession] = useState(false);
+  const handlesesion = (data) => {
+    setSession(data)
+  }
   const admin = false
   const links = [
     {name: 'Home', path: '/'},
     {name: 'About', path: '/about'},
     {name: 'Contact', path: '/contact'},
     {name: 'Blog', path: '/blog'}
-  ]
+  ];
+
 
   return (
     <div className={styles.container}>
@@ -34,6 +38,7 @@ function Links() {
         (<Navlink item={{name: 'Login', path: '/login'}} className='lin'/>)
       }{
         admin && (<Navlink item={{name: 'Admin', path: '/admin'}} className='lin'/>)
+        
       }
 
   </div>
@@ -52,5 +57,4 @@ function Links() {
   </div>
   )
 }
-
 export default Links

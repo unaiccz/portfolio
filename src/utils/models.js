@@ -13,7 +13,8 @@ const postSchema = new mongoose.Schema({
    desc: {type: String, required: true, min: 10},
    img: {type: String},
    userid: {type: String, required: true},
-   slug: {type: String, required: true, unique: true}
+   slug: {type: String, required: true, unique: true},
+   
 }, {timestamps: true});
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
