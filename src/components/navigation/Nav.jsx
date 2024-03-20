@@ -20,7 +20,7 @@ function Nav() {
 
   if (user) {
     username = user.username;
-    email = user.email;
+    email = user.email.split('@')[0];
   }
 
   return (

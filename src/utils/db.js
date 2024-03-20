@@ -6,7 +6,7 @@ export const connectdb = async () => {
             console.log('using a existing datababse');
             return;
         }
-      const db = await mongoose.connect(process.env.MONGO)
+      const db = await mongoose.connect('mongodb+srv://unai:011110@cluster0.yvafxmk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
       connection.isConnected = db.connections[0].readyState;
     }
     catch (error) {
