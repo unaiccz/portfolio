@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from './page.module.css'
 const ft = async (slug) => {
-     const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {next:{revalidate:10}})
+     const res = await fetch(`/api/blog/${slug}`, {next:{revalidate:10}})
      if (!res.ok) {
        throw new Error('Something went wrong')
      }
